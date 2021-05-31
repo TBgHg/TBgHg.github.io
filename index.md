@@ -16,7 +16,7 @@ typora-root-url: 链表
 
 
 
-
+[树的相关知识](树)
 
 ## 链表
 
@@ -1359,7 +1359,7 @@ Node* list_reverse(Node* head)
   - 3.两链表以同样的速度同时出发，相遇的结点就是公共结点
 
     ```c
-  size_t list_len(Node* head)
+    size_t list_len(Node* head)
     {
         int len = 0;
         while(head)
