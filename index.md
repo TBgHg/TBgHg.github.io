@@ -1,4 +1,4 @@
-### **[speexx](speexx.md)**
+### **[SPEEXX](speexx.md)**
 
 关键词：**小技巧**  
 
