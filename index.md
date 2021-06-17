@@ -1,6 +1,10 @@
 # TBH的个人blog
 **```下学期应该会更换为wp```**
 
+### **[如何speexx刷口语？](article/如何speexx刷口语？.md)**
+
+关键词：**小工具、小技巧**  如何更加自动化的刷speexx口语？
+
 ### **[网警大哥如何找到你？](article/网警大哥如何找到你.md)**
 
 关键词：**小技巧**  【转载】天网恢恢，疏而不漏，如何与网警大哥斗智斗勇？原文链接已失效，转自[转载者的文章](http://trustcomputing.com/bbs/viewthread.php?tid=565)
