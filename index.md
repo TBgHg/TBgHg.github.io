@@ -1,7 +1,7 @@
 # TBH的个人blog
 **```下学期应该会更换为wp```**
 
-### **[如何speexx刷口语？](article/如何speexx刷口语？.md)**
+### **[如何speexx刷口语？](article/如何speexx刷口语.md)**
 
 关键词：**小工具、小技巧**  如何更加自动化的刷speexx口语？
 
