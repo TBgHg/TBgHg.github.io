@@ -2,7 +2,7 @@
 
 ### 结果展示
 
-<img src="https://www.picbed.cn/images/2021/06/21/psc.webp" alt="psc.webp" style="zoom: 25%;" />                   <img src="https://www.picbed.cn/images/2021/06/21/psc1.webp" alt="psc1.webp" style="zoom:50%;" />                     <img src="https://www.picbed.cn/images/2021/06/21/psc2.webp" alt="psc2.webp" style="zoom:25%;" />
+<img src="https://www.picbed.cn/images/2021/06/21/psc.webp" alt="psc.webp" style="zoom: 20%;" />                   <img src="https://www.picbed.cn/images/2021/06/21/psc1.webp" alt="psc1.webp" style="zoom:50%;" />                     <img src="https://www.picbed.cn/images/2021/06/21/psc2.webp" alt="psc2.webp" style="zoom:20%;" />
 
 
 
