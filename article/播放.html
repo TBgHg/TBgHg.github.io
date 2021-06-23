@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: rgb(0,255,255);
+            font-size: 25px;
+            font-family: "楷体";
+        }
+        #demo{
+            
+            text-align: center;
+        }
+        #time{
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 30px;
+            color: pink;
+        }
+        a{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            text-decoration: none;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <input type="color" id="color" onchange="fun()">
+    <div class="demo" id="demo">
+        <p id="time"></p>
+        <!-- 重点：自己要播放多个视频资源的时候把下面src中的值换成自己电脑中的第一个视频资源地址，其他视频地址换到下面value中 -->
+        <video id="video" width="880" height="614" autobuffer controls src="http://mpvideo.qpic.cn/0bf2eeaayaaau4ahuadibrqfaiodbqqqadaa.f10002.mp4?dis_k=e7c4c91be01e7fe65db056bcbc6ffb6f&dis_t=1624415138&vid=wxv_1809700429832732673&format_id=10002&support_redirect=0&mmversion=false" type="video/mp4"></video><br>
+        <span>选择播放速率：
+            <select id="selRate">
+                <option value="0.5">0.5</option>
+                <option value="1">1.0</option>
+                <option value="1.25">1.25</option>
+                <option value="1.5">1.5</option>
+                <option value="2">2.0</option>
+                <option value="2.5">2.5</option>
+                <option value="3.0">3.0</option>
+                <option value="3.5" selected>3.5</option>
+                <option value="4.0">4.0</option>
+            </select>
+        </span>
+        <span>选集：
+            <!-- 重点：自己用的时候把下面value中的值换成自己电脑中的视频资源地址即可 -->
+            <select id="selections">
+                <option value="http://1251316161.vod2.myqcloud.com/29fe1275vodbj1251316161/f9810e4c5285890810663383264/E1Cef4LFcHwA.mp4">1</option>
+                <option value="http://1251316161.vod2.myqcloud.com/29fe1275vodbj1251316161/04bdcb545285890810663822688/XFZz1sbeKVAA.mp4">2</option>
+                <option value="http://1251316161.vod2.myqcloud.com/29fe1275vodbj1251316161/f9932ecb5285890810663393424/VcgHx75CvnsA.mp4">3</option>
+                <option value="http://1251316161.vod2.myqcloud.com/29fe1275vodbj1251316161/f928c5495285890810663337262/J8a8xa0NVQ0A.mp4">4</option>
+                <option value="http://1251316161.vod2.myqcloud.com/29fe1275vodbj1251316161/04e4363a5285890810663846877/TEyHzNq7xwcA.mp4">5</option>
+                <option value="http://1251316161.vod2.myqcloud.com/29fe1275vodbj1251316161/3d9dcc675285890810609354504/9HRUpahYdvgA.mp4">6</option>
+                <option value="http://1251316161.vod2.myqcloud.com/29fe1275vodbj1251316161/9af46a905285890810553464990/k1GW6OjsryoA.mp4">7</option>
+                <option value="http://1251316161.vod2.myqcloud.com/29fe1275vodbj1251316161/04be5fad5285890810663823842/dJmAJRau2ioA.mp4">8</option>
+                <option value="http://1251316161.vod2.myqcloud.com/29fe1275vodbj1251316161/f92951cc5285890810663338273/4aUTWQU5Xm4A.mp4">9</option>
+                <option value="http://1251316161.vod2.myqcloud.com/29fe1275vodbj1251316161/f9295a755285890810663338489/0eERQIqWOqIA.mp4">10</option>
+                <option value="http://1251316161.vod2.myqcloud.com/29fe1275vodbj1251316161/04bedf2a5285890810663824532/xQ5npTjFt2cA.mp4">11</option>
+                <option value="http://1251316161.vod2.myqcloud.com/29fe1275vodbj1251316161/f9296f335285890810663338946/YZUkwLNQLxEA.mp4">12</option>
+            </select>
+        </span>
+    </div>
+    <a href="https://blog.csdn.net/zag666">博客地址</a>
+</body>
+
+<script type="text/javascript">
+    //获取页面中的元素
+    var eleSelect = document.getElementById('selRate');
+    var eleButton = document.getElementById('btnPlay');
+    var selections = document.getElementById('selections');
+    var video = document.getElementById('video');
+    var color = document.getElementById('color');
+    // 改变播放速率
+    eleSelect.addEventListener('change', function () {
+        video.playbackRate = this.value;
+    });
+    // 点击视频播放，再次点击暂停
+    video.addEventListener('click', function () {
+         if(video.paused){
+            video.play();
+        }else{
+            video.pause();
+        }
+    });
+    //选集
+    selections.addEventListener('change', function () {
+        video.src = this.value;
+    });
+    //空格控制视频播放暂停
+    document.onkeyup = function (event) {
+        var e = event || window.event || arguments.callee.caller.arguments[0];
+    if (e && e.keyCode === 32) {
+            // 按空格键 判断当前是否暂停
+            video.paused === true ? video.play() : video.pause();
+            return false;
+        }
+    };
+    //设置背景颜色
+    color.addEventListener('change', function () {
+        document.body.style.backgroundColor=color.value;
+    });
+    //设置右上角的北京时间
+    setInterval(function(){
+            clock=new Date();
+            year=clock.getFullYear();
+            month=clock.getMonth()+1;
+            day=clock.getDate();
+            hour=clock.getHours();
+            minute=clock.getMinutes();
+            second=clock.getSeconds();
+            if (hour<10) {
+                hour="0"+hour;
+            }
+            if (minute<10) {
+                minute="0"+minute;
+            }
+            if (second<10) {
+                second="0"+second;
+            }
+            str=year+'-'+month+'-'+day+' '+hour+':'+minute+':'+second;
+            document.getElementById("time").innerHTML=str;
+        },1000);
+</script>
+</html>
