@@ -1,6 +1,11 @@
 # TBH的个人blog
 **```下学期应该会更换为wp```**
 
+
+### **[pwn入门的学习资料](article/pwn入门的学习资料.md)**
+
+关键词：**CTF**  [pwn入门需要学习的知识方向参考【转载】](https://www.jianshu.com/p/7133863623e6)
+
 ### **[如何speexx刷口语？](article/如何speexx刷口语.md)**
 
 关键词：**小工具、小技巧**  如何更加自动化的刷speexx口语？
