@@ -1,6 +1,8 @@
 # TBH的个人blog
 **```下学期应该会更换为wp```**
 
+**已经换了，欢迎访问：[https://tbghg.top](https://tbghg.top)**
+
 
 ### **[pwn入门的学习资料](article/pwn入门的学习资料.md)**
 
